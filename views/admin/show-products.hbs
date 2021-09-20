@@ -1,0 +1,45 @@
+<section>
+    <div class="container mt-5">
+      <div class="row">
+        <a href="/admin/add-products" class="btn btn-success ml-auto">Add products</a>
+      </div>
+      <br>
+        <table class="table mt-5" id="tableid">
+  <thead>
+    <tr>
+      <th scope="col">Num</th>
+      <th scope="col">Products</th>
+      <th scope="col">Category</th>
+      <th scope="col">Price</th>
+      <th scope="col">Description</th>
+      <th>image</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each products}}
+    <tr>
+      <th scope="row">1</th>
+      <td>{{this.Name}}</td>
+      <td>{{this.Category}}</td>
+      <td>{{this.Price}}</td>
+      <td>{{this.descri}}</td>
+      <td><img style="width: 50px; height:50px" src="/images/{{this._id}}.jpg"></td>
+      <td><a href="/admin/edit-product/{{this._id}}" class="btn btn-primary">Edit</a>
+      <a href="/admin/delete-product/{{this._id}}" class="btn btn-danger" onclick="return confirm('Orpikkavoo?');">Delete</button></a></td>
+ 
+    </tr>
+    {{/each}}
+    
+  </tbody>
+</table>
+    </div>
+    
+</section>
+
+<script>
+  $(function(){
+    $('#tableid').DataTable();
+
+  });
+</script>

@@ -1,0 +1,30 @@
+<section>
+    <div class="container mt-5">
+      <div class="row">
+        <a href="/admin/add-products" class="btn btn-success ml-auto">Add products</a>
+      </div>
+        <table class="table mt-5">
+  <thead>
+    <tr>
+      <th scope="col">Num</th>
+      <th scope="col">Products</th>
+      <th scope="col">Category</th>
+      <th scope="col">Description</th>
+      <th>image</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each products}}
+    <tr>
+      <th scope="row">1</th>
+      <td>{{this.Name}}</td>
+      <td>{{this.Category}}</td>
+      <td>{{this.descri}}</td>
+      <td><img style="width: 50px; height:50px" src="/images/{{this._id}}.jpg"></td>
+    </tr>
+    {{/each}}
+    
+  </tbody>
+</table>
+    </div>
+</section>

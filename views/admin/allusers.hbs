@@ -1,0 +1,38 @@
+<section>
+    <div class="container mt-5">
+      
+      <br>
+        <table class="table mt-5" id="tableid">
+  <thead>
+    <tr>
+      <th scope="col">Num</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Date Created</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+      {{#each users}}
+    <tr>
+      <th scope="row">1</th>
+      <td>{{this.Name}}</td>
+      <td>{{this.Email}}</td>
+      <td>{{this.Date}}</td>
+     
+     
+    </tr>
+    {{/each}}
+    
+  </tbody>
+</table>
+    </div>
+    
+</section>
+
+<script>
+  $(function(){
+    $('#tableid').DataTable();
+
+  });
+</script>

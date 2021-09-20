@@ -1,0 +1,46 @@
+<section>
+    <div class="container mt-5">
+
+      <h1>
+        Orders
+      </h1>
+      
+      <br>
+        <table class="table mt-5" id="tableid">
+  <thead>
+    <tr>
+      <th scope="col">Num</th>
+      <th scope="col">User Name</th>
+      {{!-- <th scope="col">Delivery details</th> --}}
+      <th scope="col">Date </th>
+      <th scope="col">Total Bill</th>
+      <th scope="col">Payment method</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+      {{#each orders}}
+    <tr>
+      <th scope="row">1</th>
+      <td>{{this.}}</td>
+      {{!-- <td>{{this.}}</td> --}}
+      <td>{{this.Date}}</td>
+      <td>{{this.totalAmount}}</td>
+      <td>{{this.paymentMethod}}</td>
+     
+     
+    </tr>
+    {{/each}}
+    
+  </tbody>
+</table>
+    </div>
+    
+</section>
+
+<script>
+  $(function(){
+    $('#tableid').DataTable();
+
+  });
+</script>
